@@ -1,7 +1,9 @@
 name: Terraform Deploy
 
 on:
-  workflow_dispatch:  # Manually trigger this from UI or API
+  push:
+    branches:
+      - main   # ✅ Automatically run when code is pushed to main branch
 
 jobs:
   terraform:
